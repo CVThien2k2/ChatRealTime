@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 .home {
-  background-color: rgb(30 41 59);
+  background-color: white;
   width: 100%;
   height: 85vh;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
-  font-family: 'Playfair Display', serif; 
+  font-family: "Playfair Display", serif;
 
   .container {
     flex: 1;
@@ -32,7 +32,7 @@
         input {
           background-color: transparent;
           border: none;
-          color: white;
+          color: black;
           outline: none;
         }
       }
@@ -42,7 +42,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: white;
+        color: black;
         cursor: pointer;
 
         .userChatInfo {
@@ -66,7 +66,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: white;
+
         cursor: pointer;
 
         .userChatInfo {
@@ -95,16 +95,17 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px;
-      color: lightgray;
 
       .chatIcons {
         display: flex;
         gap: 10px;
       }
+      .chatIcons > *:not(:last-child) {
+        margin-right: 20px;
+      }
     }
 
     .Messages {
-      background-color: rgb(30 41 59);
       padding: 10px;
       border: 1px solid #fff;
       flex-grow: 1; /* Mở rộng để chiếm hết không gian còn lại trong .chat */
@@ -132,7 +133,7 @@
         width: 100%;
         border: none;
         outline: none;
-        color: #2f2d52;
+
         font-size: 18px;
       }
 
@@ -148,7 +149,6 @@
         button {
           padding: 8px 16px;
           background-color: #2f2d52;
-          color: white;
           border: none;
           border-radius: 4px;
           cursor: pointer;

@@ -1,4 +1,5 @@
 import React from "react";
+// import { Search } from "react-bootstrap-icons";
 
 const Search = () => {
   return (
@@ -15,7 +16,7 @@ const Search = () => {
       </div>
 
       <div className="searchForm">
-        <input type="text" />
+        <input type="text" placeholder="Search" />
       </div>
     </div>
   );

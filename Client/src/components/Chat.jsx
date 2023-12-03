@@ -1,5 +1,5 @@
 import React from "react";
-import { CameraVideo, PersonFill, ThreeDots } from "react-bootstrap-icons";
+import { CameraVideo, Telephone } from "react-bootstrap-icons";
 import Messages from "./Messages";
 import Input from "./Input";
 
@@ -9,9 +9,8 @@ const Chat = () => {
       <div className="chatInfo">
         <span>Peter</span>
         <div className="chatIcons">
-          <CameraVideo color="green" size={30} />
-          <PersonFill color="blue" size={30} />
-          <ThreeDots color="black" size={30} />
+          <CameraVideo color="black" size={25} />
+          <Telephone color="black" size={25} />
         </div>
       </div>
       <Messages />
