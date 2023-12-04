@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={user ? <Home /> : <Login />} />
           <Route path="/login" element={user ? <Home /> : <Login />} />
           <Route path="/register" element={user ? <Home /> : <Register />} />
-          <Route path="/setAvatar" element={user ? <Home /> : <SetAvatar />} />
+          {/* <Route path="/setAvatar" element={user ? <Home /> : <SetAvatar />} /> */}
 
           {/* <Route path="/*" element={<Navigate to="/" />} /> */}
 

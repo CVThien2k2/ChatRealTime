@@ -32,21 +32,26 @@
   .col-sm-1 {
     padding: 0;
     .sidebar {
+      color: white;
       height: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
+      background-color: #444444;
 
       .avt {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20px;
-        height: 50px; /* Đặt chiều cao là 50px */
+        background-color: #222222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px; /* Chiều cao .avt */
+        width: 100%;
 
         .img-avt {
           width: 30px;
           height: 30px;
           border-radius: 50%; /* Tạo hình tròn */
+          /* margin-top: 20px; (Bạn có thể xóa dòng này) */
         }
       }
 
@@ -57,7 +62,7 @@
         flex-grow: 1;
 
         .icon {
-          color: black;
+          color: white;
           margin-bottom: 30px;
         }
       }
@@ -66,11 +71,16 @@
       }
       .settingIcon {
         display: flex;
-        flex-direction: column; /* Sắp xếp theo chiều dọc */
-        margin-top: auto; /* Đẩy settingIcon xuống cuối cùng */
-        margin-bottom: 15px;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: 0;
+        width: 100%; /* Chiếm trọn chiều ngang của sidebar */
+        background-color: #666666;
+
         .setIcon {
           margin-top: 10px;
+          margin-bottom: 10px;
+          width: 100%; /* Chiếm trọn chiều ngang của sidebar */
         }
       }
 
@@ -94,7 +104,7 @@
 
       .searchUser {
         // border-bottom: 1px solid gray;
-        padding-bottom: 10px;
+        padding-bottom: 0;
         background-color: #e0e0e0;
         width: 100%;
 
@@ -108,12 +118,16 @@
           margin: 20px;
 
           input {
-            width: 250px;
             border: none;
             color: black;
             align-items: center;
             outline: none;
-            margin-left: 10px; /* Khoảng cách giữa icon và input */
+            flex: 1; /* Input mở rộng để lấp đầy không gian còn lại */
+            padding-left: 5px; /* Khoảng cách giữa icon và input */
+            padding-right: 5px;
+            max-width: calc(
+              100% - 30px
+            ); /* Giới hạn input không bao quá 30px để nhường chỗ cho icon */
           }
         }
 
@@ -128,6 +142,7 @@
           .userChatInfo {
             align-items: center; /* Căn chỉnh theo chiều dọc */
           }
+
           .img-avt {
             width: 30px;
             height: 30px;
