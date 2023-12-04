@@ -5,50 +5,54 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/Authcontext";
 
-import SideBar from "../components/SideBar";
+import ChatList from "../components/ChatList";
 import Chat from "../components/Chat";
 import SetAvatar from "../components/SetAvatar";
+import SideBar from "../components/SideBar";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [contact, setContact] = useState([]);
-  const [currentUser, setCurrentUser] = useState(undefined);
-  const { user } = useContext(AuthContext);
+  // const navigate = useNavigate();
+  // const [contact, setContact] = useState([]);
+  // const [currentUser, setCurrentUser] = useState(undefined);
+  // const { user } = useContext(AuthContext);
 
-  useEffect(() => {
-    const checkUser = async () => {
-      if (!user) {
-        navigate("/login");
-      } else {
-        setCurrentUser(await JSON.parse(user));
-      }
-    };
+  // useEffect(() => {
+  //   const checkUser = async () => {
+  //     if (!user) {
+  //       navigate("/login");
+  //     } else {
+  //       setCurrentUser(await JSON.parse(user));
+  //     }
+  //   };
 
-    checkUser();
-  }, [user, navigate]);
+  //   checkUser();
+  // }, [user, navigate]);
 
-  useEffect(() => {
-    const fetchContactData = async () => {
-      if (currentUser) {
-        if (currentUser.isAvatarImageSet) {
-          const data = await axios.get(`/api/allUsers/${currentUser._id}`);
-          setContact(data.data);
-        } else {
-          navigate("/setAvatar");
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const fetchContactData = async () => {
+  //     if (currentUser) {
+  //       if (currentUser.isAvatarImageSet) {
+  //         const data = await axios.get(`/api/allUsers/${currentUser._id}`);
+  //         setContact(data.data);
+  //       } else {
+  //         navigate("/setAvatar");
+  //       }
+  //     }
+  //   };
 
-    fetchContactData();
-  }, [currentUser, navigate]);
+  //   fetchContactData();
+  // }, [currentUser, navigate]);
 
   return (
     <div className="home">
       <Row className="container">
-        <Col sm={4} className="full-height no-scroll">
+        <Col sm={1}>
           <SideBar />
         </Col>
-        <Col sm={8} className="full-height no-scroll">
+        <Col sm={4} className="full-height no-scroll">
+          <ChatList />
+        </Col>
+        <Col sm={7} className="full-height no-scroll">
           <Chat />
         </Col>
       </Row>

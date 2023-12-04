@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
 .home {
   background-color: white;
   width: 100%;
@@ -15,19 +29,67 @@
   .full-height {
     height: 100%;
   }
-
   .sidebar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .avt {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+      height: 50px; /* Đặt chiều cao là 50px */
+
+      .img-avt {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%; /* Tạo hình tròn */
+      }
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column; /* Sắp xếp các icon theo chiều dọc */
+      margin-top: 20px; /* Thêm khoảng cách giữa avt và các icon */
+      flex-grow: 1;
+
+      .icon {
+        color: black;
+        margin-bottom: 30px;
+      }
+    }
+
+    .settingIcon {
+      display: flex;
+      flex-direction: column; /* Sắp xếp theo chiều dọc */
+      margin-top: auto; /* Đẩy settingIcon xuống cuối cùng */
+      margin-bottom: 15px;
+      .setIcon {
+        margin-top: 10px;
+      }
+    }
+
+    /* Thiết lập khoảng cách giữa các icon (tuỳ chọn) */
+    .settingIcon > *:not(:last-child) {
+      margin-bottom: 10px; /* Đặt khoảng cách giữa các thành phần là 10px */
+    }
+  }
+
+  .chatlist {
     display: flex;
     flex-direction: column;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     height: 100%;
+    background-color: #f0f0f0;
 
     .search {
-      border-bottom: 1px solid gray;
-      padding: 10px;
+      // border-bottom: 1px solid gray;
+      padding-bottom: 10px;
+      background-color: #e0e0e0;
 
       .searchForm {
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
         padding: 10px;
         input {
           background-color: transparent;
@@ -57,11 +119,11 @@
       }
     }
     .chats {
-      border: 1px solid #fff;
+      // border: 1px solid gray;
       flex-grow: 1;
 
       .userChat {
-        border: 1px solid #fff;
+        border-bottom: 1px solid gray;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -90,15 +152,26 @@
     flex-direction: column;
 
     .chatInfo {
-      height: 50px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px;
+      padding-top: 10px;
 
       .chatIcons {
         display: flex;
         gap: 10px;
+      }
+
+      .chatIcons > * {
+        border-radius: 50%; /* Tạo border tròn */
+
+        background-color: rgb(231, 230, 230); /* Màu nền xám bên trong */
+        padding: 7px; /* Khoảng cách từ biên đến icon */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box; /* Đảm bảo kích thước tính cả border */
       }
       .chatIcons > *:not(:last-child) {
         margin-right: 20px;
@@ -106,11 +179,10 @@
     }
 
     .Messages {
-      padding: 10px;
+      padding: 20px;
       border: 1px solid #fff;
       flex-grow: 1; /* Mở rộng để chiếm hết không gian còn lại trong .chat */
-
-      //   height: calc(100% - 160px);
+      border-top: 1px solid #ccc;
       overflow: auto; /* Cho phép cuộn nếu nội dung vượt quá kích thước */
 
       .Message {
@@ -122,12 +194,13 @@
 
     .Input {
       border: 1px solid #fff;
-      height: 50px;
+      height: 70px;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
+      border-top: 1px solid #ccc;
 
       input[type="text"] {
         width: 100%;
@@ -146,12 +219,16 @@
           cursor: pointer;
         }
 
-        button {
-          padding: 8px 16px;
-          background-color: #2f2d52;
+        .sendButton {
+          width: 30px;
+          height: 30px;
+          background-color: rgb(234, 47, 47);
           border: none;
-          border-radius: 4px;
+          border-radius: 50%;
           cursor: pointer;
+          display: flex; /* Thêm display flex để icon bên trong được căn giữa */
+          justify-content: center;
+          align-items: center;
         }
       }
     }

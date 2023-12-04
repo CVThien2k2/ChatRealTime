@@ -1,5 +1,5 @@
 import React from "react";
-import { Paperclip, Image } from "react-bootstrap-icons";
+import { Paperclip, Image, SendFill } from "react-bootstrap-icons";
 
 const Input = () => {
   return (
@@ -11,7 +11,9 @@ const Input = () => {
         <label htmlFor="file">
           <Image />
         </label>
-        <button>send</button>
+        <button className="sendButton">
+          <SendFill color="white" size={15} />
+        </button>
       </div>
     </div>
   );
