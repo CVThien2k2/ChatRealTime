@@ -82,6 +82,9 @@
           margin-bottom: 10px;
           width: 100%; /* Chiếm trọn chiều ngang của sidebar */
         }
+        // .setIcon:hover {
+        //   background-color: white; /* Đổi màu nền khi hover */
+        // }
       }
 
       /* Thiết lập khoảng cách giữa các icon (tuỳ chọn) */
@@ -242,13 +245,30 @@
       justify-content: space-between;
       margin-top: auto;
       border-top: 1px solid #ccc;
+      .emojiAndInput {
+        display: flex; /* Sử dụng flexbox */
+        align-items: center;
+        flex: 1;
+        .emojiContainer {
+          display: inline-block; /* Đảm bảo nó không chiếm toàn bộ hàng */
+          padding: 2px; /* Khoảng cách giữa emoji và border */
+          background-color: #ccc; /* Màu nền xám xung quanh emoji */
+          border: 5px solid transparent; /* Viền không màu ban đầu */
+          border-radius: 50%; /* Làm tròn góc để tạo hình dạng tròn */
+        }
 
-      input[type="text"] {
-        width: 100%;
-        border: none;
-        outline: none;
+        .emoji {
+          display: block; /* Chỉnh vị trí của emoji bên trong container */
+          margin: 0 auto;
+        }
 
-        font-size: 18px;
+        input[type="text"] {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding-left: 20px;
+          font-size: 18px;
+        }
       }
 
       .send {
@@ -259,7 +279,17 @@
         label {
           cursor: pointer;
         }
-
+        .sendFile {
+          display: inline-block; /* Đảm bảo nó không chiếm toàn bộ hàng */
+          padding: 2px; /* Khoảng cách giữa emoji và border */
+          background-color: #ccc; /* Màu nền xám xung quanh emoji */
+          border: 5px solid transparent; /* Viền không màu ban đầu */
+          border-radius: 50%; /* Làm tròn góc để tạo hình dạng tròn */
+          .file {
+            display: block; /* Chỉnh vị trí của emoji bên trong container */
+            margin: 0 auto;
+          }
+        }
         .sendButton {
           width: 30px;
           height: 30px;
