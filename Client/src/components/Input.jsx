@@ -14,7 +14,11 @@ const Input = () => {
           <EmojiLaughing className="emoji" size={15} />
         </div>
 
-        <input type="text" placeholder="Your message here..." />
+        <input
+          className="message-input"
+          type="text"
+          placeholder="Your message here..."
+        />
       </div>
       <div className="send">
         <div className="sendFile">
