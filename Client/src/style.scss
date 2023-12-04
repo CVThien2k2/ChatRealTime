@@ -92,20 +92,28 @@
       height: 100%;
       background-color: #f0f0f0;
 
-      .search {
+      .searchUser {
         // border-bottom: 1px solid gray;
         padding-bottom: 10px;
         background-color: #e0e0e0;
         width: 100%;
 
         .searchForm {
-          // border: 1px solid #fff;
-          padding: 10px;
+          border: 1px solid transparent; /* Viền không màu */
+          border-radius: 20px; /* Border tròn */
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          background-color: white;
+          margin: 20px;
+
           input {
-            background-color: transparent;
+            width: 250px;
             border: none;
             color: black;
+            align-items: center;
             outline: none;
+            margin-left: 10px; /* Khoảng cách giữa icon và input */
           }
         }
 

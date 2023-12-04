@@ -1,12 +1,13 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import Search from "./Search";
+import SearchUser from "./SearchUser";
 import Chats from "./Chats";
+// import { Search } from "react-bootstrap-icons";
 
 const ChatList = () => {
   return (
     <div className="chatlist">
-      <Search />
+      <SearchUser />
       <Chats />
     </div>
   );
