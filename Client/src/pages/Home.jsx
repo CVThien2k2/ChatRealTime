@@ -49,10 +49,10 @@ const Home = () => {
         <Col sm={1}>
           <SideBar />
         </Col>
-        <Col sm={4} className="full-height no-scroll">
+        <Col sm={4}>
           <ChatList />
         </Col>
-        <Col sm={7} className="full-height no-scroll">
+        <Col sm={7}>
           <Chat />
         </Col>
       </Row>

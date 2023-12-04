@@ -26,119 +26,130 @@
   .container {
     flex: 1;
   }
-  .full-height {
-    height: 100%;
-  }
-  .sidebar {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    .avt {
-      margin-right: auto;
-      margin-left: auto;
-      margin-top: 20px;
-      height: 50px; /* Đặt chiều cao là 50px */
-
-      .img-avt {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%; /* Tạo hình tròn */
-      }
-    }
-
-    .icons {
+  // .full-height {
+  //   height: 100%;
+  // }
+  .col-sm-1 {
+    padding: 0;
+    .sidebar {
+      height: 100%;
       display: flex;
-      flex-direction: column; /* Sắp xếp các icon theo chiều dọc */
-      margin-top: 20px; /* Thêm khoảng cách giữa avt và các icon */
-      flex-grow: 1;
+      align-items: center;
+      flex-direction: column;
 
-      .icon {
-        color: black;
-        margin-bottom: 30px;
+      .avt {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        height: 50px; /* Đặt chiều cao là 50px */
+
+        .img-avt {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%; /* Tạo hình tròn */
+        }
       }
-    }
 
-    .settingIcon {
-      display: flex;
-      flex-direction: column; /* Sắp xếp theo chiều dọc */
-      margin-top: auto; /* Đẩy settingIcon xuống cuối cùng */
-      margin-bottom: 15px;
-      .setIcon {
-        margin-top: 10px;
-      }
-    }
+      .icons {
+        display: flex;
+        flex-direction: column; /* Sắp xếp các icon theo chiều dọc */
+        margin-top: 20px; /* Thêm khoảng cách giữa avt và các icon */
+        flex-grow: 1;
 
-    /* Thiết lập khoảng cách giữa các icon (tuỳ chọn) */
-    .settingIcon > *:not(:last-child) {
-      margin-bottom: 10px; /* Đặt khoảng cách giữa các thành phần là 10px */
-    }
-  }
-
-  .chatlist {
-    display: flex;
-    flex-direction: column;
-    // border: 1px solid #fff;
-    height: 100%;
-    background-color: #f0f0f0;
-
-    .search {
-      // border-bottom: 1px solid gray;
-      padding-bottom: 10px;
-      background-color: #e0e0e0;
-
-      .searchForm {
-        // border: 1px solid #fff;
-        padding: 10px;
-        input {
-          background-color: transparent;
-          border: none;
+        .icon {
           color: black;
-          outline: none;
+          margin-bottom: 30px;
+        }
+      }
+      .col-sm-1 {
+        padding: 0;
+      }
+      .settingIcon {
+        display: flex;
+        flex-direction: column; /* Sắp xếp theo chiều dọc */
+        margin-top: auto; /* Đẩy settingIcon xuống cuối cùng */
+        margin-bottom: 15px;
+        .setIcon {
+          margin-top: 10px;
         }
       }
 
-      .userChat {
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: black;
-        cursor: pointer;
-
-        .userChatInfo {
-          align-items: center; /* Căn chỉnh theo chiều dọc */
-        }
-        .img-avt {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%; /* Tạo hình tròn */
-          margin-right: 5px; /* Khoảng cách với tên "Jane" */
-        }
+      /* Thiết lập khoảng cách giữa các icon (tuỳ chọn) */
+      .settingIcon > *:not(:last-child) {
+        margin-bottom: 10px; /* Đặt khoảng cách giữa các thành phần là 10px */
       }
     }
-    .chats {
-      // border: 1px solid gray;
-      flex-grow: 1;
+  }
+  .col-sm-4 {
+    margin: 0;
+    padding: 0;
 
-      .userChat {
-        border-bottom: 1px solid gray;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    .chatlist {
+      margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid #fff;
+      height: 100%;
+      background-color: #f0f0f0;
 
-        cursor: pointer;
+      .search {
+        // border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+        background-color: #e0e0e0;
+        width: 100%;
 
-        .userChatInfo {
-          align-items: center; /* Căn chỉnh theo chiều dọc */
+        .searchForm {
+          // border: 1px solid #fff;
+          padding: 10px;
+          input {
+            background-color: transparent;
+            border: none;
+            color: black;
+            outline: none;
+          }
         }
-        .img-avt {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%; /* Tạo hình tròn */
-          margin-right: 5px; /* Khoảng cách với tên "Jane" */
+
+        .userChat {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: black;
+          cursor: pointer;
+
+          .userChatInfo {
+            align-items: center; /* Căn chỉnh theo chiều dọc */
+          }
+          .img-avt {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%; /* Tạo hình tròn */
+            margin-right: 5px; /* Khoảng cách với tên "Jane" */
+          }
+        }
+      }
+      .chats {
+        // border: 1px solid gray;
+        flex-grow: 1;
+
+        .userChat {
+          border-bottom: 1px solid gray;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          cursor: pointer;
+
+          .userChatInfo {
+            align-items: center; /* Căn chỉnh theo chiều dọc */
+          }
+          .img-avt {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%; /* Tạo hình tròn */
+            margin-right: 5px; /* Khoảng cách với tên "Jane" */
+          }
         }
       }
     }
@@ -157,6 +168,13 @@
       align-items: center;
       justify-content: space-between;
       padding-top: 10px;
+      .nameWithDot {
+        .name {
+          font-size: 20px; /* Đặt kích thước chữ lớn hơn */
+          font-weight: bold;
+          margin-left: 15px;
+        }
+      }
 
       .chatIcons {
         display: flex;

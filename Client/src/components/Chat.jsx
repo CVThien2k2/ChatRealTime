@@ -9,7 +9,7 @@ const Chat = () => {
     <div className="chat">
       <div className="chatInfo">
         <div className="nameWithDot">
-          <span>Peter</span>
+          <span className="name">Peter</span>
           <div>
             <Dot color="green" size={40} /> <span>Active now</span>
           </div>
