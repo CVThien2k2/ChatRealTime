@@ -1,5 +1,5 @@
 import React from "react";
-// import { Dot } from "react-bootstrap-icons";
+import { Dot } from "react-bootstrap-icons";
 
 const OnlineUsers = () => {
   return (
@@ -11,7 +11,7 @@ const OnlineUsers = () => {
           alt=""
         />
 
-        {/* <Dot className="dot" color="green" size={40} /> */}
+        <Dot className="dot" color="green" size={40} />
       </div>
     </div>
   );
