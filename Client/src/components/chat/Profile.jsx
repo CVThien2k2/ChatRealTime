@@ -19,7 +19,7 @@ export default function Profile() {
   const handleSaveClick = async () => {
     try {
       const response = await postRequest(
-        ${baseUrl}/auth/profile,
+        "${baseUrl}/auth/profile",
         JSON.stringify(profileData)
       );
       if (response.error) {
