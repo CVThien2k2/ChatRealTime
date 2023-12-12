@@ -135,20 +135,20 @@ class authController {
   }
   async updateProfile(req, res) {
     try {
-      const user_id = req.body.user_id;
+      console.log(req.body);
+      const user_id = req.body._id;
       const name = req.body.name;
       const numberPhone = req.body.numberPhone;
       const address = req.body.address;
       const avatar = req.body.avatar;
-      const gender = req.body.gender;
-
+      const email = req.body.email;
       var response = await authService.updateProfile(
         user_id,
         name,
         numberPhone,
         address,
         avatar,
-        gender
+        email
       );
 
       res.status(200).json(response);
