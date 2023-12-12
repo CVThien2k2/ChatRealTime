@@ -140,12 +140,15 @@ class authController {
       const numberPhone = req.body.numberPhone;
       const address = req.body.address;
       const avatar = req.body.avatar;
+      const gender = req.body.gender;
+
       var response = await authService.updateProfile(
         user_id,
         name,
         numberPhone,
         address,
-        avatar
+        avatar,
+        gender
       );
 
       res.status(200).json(response);
