@@ -6,5 +6,7 @@ router.post("/create", authController.registerUser);
 router.post("/login", authController.loginUser);
 router.get("/find/:userId", authController.findUser);
 router.get("/", authController.getUser);
+router.post("/friends", authController.getFriends);
+router.post("/online/", authController.updateOnline);
 
 module.exports = router;
